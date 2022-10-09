@@ -17,21 +17,21 @@ public class Main {
         // 添加面板
         frame.add(panel);
 
-        String[] columnNames = {"First Name",
-                "Last Name",
-                "Sport",
-                "# of Years",
-                "Vegetarian"};
+        String[] columnNames = {"Biblioteca",
+                "Localidad",
+                "Descripcion",
+                "Horario",
+                "URL"};
         Object[][] data = {
-                {"Kathy", "Smith",
+                {"Bibliometro", "Madrid",
                         "Snowboarding", 5, Boolean.FALSE},
-                {"John", "Doe",
+                {"Bibliored Centro Cultural Galileo", "Madrid",
                         "Rowing", 3, Boolean.TRUE},
-                {"Sue", "Black",
+                {"Biblioteca P?blica Antonio Mingote (Latina)", "Madrid",
                         "Knitting", 2, Boolean.FALSE},
-                {"Jane", "White",
+                {"Biblioteca Publica Jos? Acu?a (Moncloa - Aravaca)", "Madrid",
                         "Speed reading", 20, Boolean.TRUE},
-                {"Joe", "Brown",
+                {"Biblioteca Publica Jos? Hierro (Usera)", "Madrid",
                         "Pool", 10, Boolean.FALSE}
         };
 

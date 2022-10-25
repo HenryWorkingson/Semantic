@@ -24,18 +24,19 @@ public class Main {
                 "URL"};
         Object[][] data = {
                 {"Bibliometro", "Madrid",
-                        "Snowboarding", 5, Boolean.FALSE},
+                        "El Bibliometro es un servicio de extensi?n bibliotecaria destinado al fomento de la lectura mediante el pr?stamo gratuito de libros en el Metro de Madrid. Promovido conjuntamente por el Ayuntamiento de Madrid y la Comunidad de Madrid en colaboraci?n con Metro, el Bibliometro es el primer servicio com?n a los dos sistemas de Bibliotecas P?blicas del Ayuntamiento de Madrid y la Comunidad de Madrid. El servicio gestionado por el Ayuntamiento de Madrid se centraliza en el Departamento de Bibliotecas P?blicas, localizado en la calle Conde Duque 11. El servicio de Bibliored es similar, pero en superficie.", 24, Boolean.FALSE},
                 {"Bibliored Centro Cultural Galileo", "Madrid",
-                        "Rowing", 3, Boolean.TRUE},
+                        "El Bibliored es un servicio de extensi?n bibliotecaria destinado al fomento de la lectura mediante el pr?stamo gratuito de libros, un proyecto similar al de Bibliometro pero en la superficie. Existen dos m?dulos: el de el Centro Cultural Galileo y la Sala Le?n Felipe. El servicio, gestionado por el Ayuntamiento de Madrid, se coordina desde el Departamento de Bibliotecas P?blicas, localizado en la calle Conde Duque, 9-11.", 24, Boolean.TRUE},
                 {"Biblioteca P?blica Antonio Mingote (Latina)", "Madrid",
-                        "Knitting", 2, Boolean.FALSE},
+                        "El Bibliored es un servicio de extensi?n bibliotecaria destinado al fomento de la lectura mediante el pr?stamo gratuito de libros, un proyecto similar al de Bibliometro pero en la superficie. Existen dos m?dulos: el de el Centro Cultural Galileo y la Sala Le?n Felipe. El servicio, gestionado por el Ayuntamiento de Madrid, se coordina desde el Departamento de Bibliotecas P?blicas, localizado en la calle Conde Duque, 9-11.", 24, Boolean.FALSE},
                 {"Biblioteca Publica Jos? Acu?a (Moncloa - Aravaca)", "Madrid",
-                        "Speed reading", 20, Boolean.TRUE},
+                        "La Biblioteca P?blica de Aluche se inaugur? en junio de 1992 con la asistencia del entonces alcalde Don Jos? Mar?a Alvarez del Manzano. Se sit?a en la primera planta del Centro Cultural Fernando de los R?os, dise?ado por el arquitecto Jos? Mar?a Guijarro. Desde 1986 y hasta la fecha de su inauguraci?n oficial, se encontraba situada en este mismo centro cultural y planta pero en el ala derecha del edificio y con la mitad de superficie. La ubicaci?n de la biblioteca en el centro cultural en la d?cada de los 80  se decidi? porque ?ste era considerado un elemento aglutinador de la vida asociativa y cultural de los distritos.", 24, Boolean.TRUE},
                 {"Biblioteca Publica Jos? Hierro (Usera)", "Madrid",
-                        "Pool", 10, Boolean.FALSE}
+                        "La biblioteca se abri? al p?blico en mayo de 1999 denomin?ndose Biblioteca Mateo Inurria, por estar situada en dicha calle. En 2008, por acuerdo plenario, pas? a llamarse Biblioteca D?maso Alonso. Y es que este poeta vivi? en el n?mero 25 de la calle Alberto Alcocer, en una casita con huerta y jard?n situada en su momento a las afueras de Madrid, en Chamart?n de la Rosa. En cuanto a los or?genes de la biblioteca, en 1997 la sede del diario Ya se convierte en sede del Barclays Bank. A cambio, la entidad cede una parcela al Ayuntamiento para la construcci?n de una biblioteca, que entreg? ya equipada. En 2008 se ampli? el vest?bulo, se instal? un ascensor y se cerr? una de las dos escaleras. En su lugar se coloc? un lucernario para iluminar la sala de lectura.", 24, Boolean.FALSE}
         };
 
         JTable table = new JTable(data, columnNames);
+        table.setAutoscrolls(true);
         table.setRowHeight(50);
         table.setFillsViewportHeight(true);
         panel.setLayout(new BorderLayout());
@@ -52,7 +53,7 @@ public class Main {
     }
     public static void main(String args[])
     {
-        new Main();
+        new Ventanas();
     }
 
 }

@@ -23,6 +23,7 @@ public class Mysql {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
     }*/
     public static void main(String[] args) {
         Connection conn = null;

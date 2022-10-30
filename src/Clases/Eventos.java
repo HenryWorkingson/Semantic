@@ -2,11 +2,37 @@ package Clases;
 
 public class Eventos {
     private String NombreEvento;
-    private String DiasDeSemanas;
     private String FechaInicio;
     private String FechaFin;
     private String HoraEmpiezo;
     private String NombreIntalacion;
+    private String WikidataEvento;
+    private String WikiStreet;
+    private String WikiCoor;
+
+    public String getWikiStreet() {
+        return WikiStreet;
+    }
+
+    public void setWikiStreet(String wikiStreet) {
+        WikiStreet = wikiStreet;
+    }
+
+    public String getWikiCoor() {
+        return WikiCoor;
+    }
+
+    public void setWikiCoor(String wikiCoor) {
+        WikiCoor = wikiCoor;
+    }
+
+    public String getWikidataEvento() {
+        return this.WikidataEvento;
+    }
+
+    public void setWikidataEvento(String wikidataEvento) {
+        this.WikidataEvento = wikidataEvento;
+    }
 
     public String getNombreEvento() {
         return this.NombreEvento;
@@ -15,15 +41,6 @@ public class Eventos {
     public void setNombreEvento(String nombreEvento) {
         this.NombreEvento = nombreEvento;
     }
-
-    public String getDiasDeSemanas() {
-        return this.DiasDeSemanas;
-    }
-
-    public void setDiasDeSemanas(String diasDeSemanas) {
-        this.DiasDeSemanas = diasDeSemanas;
-    }
-
     public String getFechaInicio() {
         return this.FechaInicio;
     }

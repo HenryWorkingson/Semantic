@@ -15,7 +15,6 @@ public class Bibliotecas {
     private String nivelDeMar;
 
     public Bibliotecas() throws IOException, MediaWikiApiErrorException {
-        this.nivelDeMar= new DatosWiki().DatosMadrid();
     }
 
     public String getPk() {
@@ -75,6 +74,9 @@ public class Bibliotecas {
     }
     public String getNivelDeMar() {
         return this.nivelDeMar;
+    }
+    public void setNivelDeMar(String nivelDeMar) {
+        this.nivelDeMar = nivelDeMar;
     }
 
 }

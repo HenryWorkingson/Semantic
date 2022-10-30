@@ -163,6 +163,11 @@ public class SPARQL {
         }
         return convEventos(lista);
     }
+    public static ArrayList<QuerySolution> Wikidata(){
+        ArrayList<QuerySolution> sol = new ArrayList<>();
+
+        return sol;
+    }
     //@SuppressWarnings("deprecation")
     public static void main (String args[]) {
         queryBiblioteca();

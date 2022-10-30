@@ -9,51 +9,51 @@ public class Eventos {
     private String NombreIntalacion;
 
     public String getNombreEvento() {
-        return NombreEvento;
+        return this.NombreEvento;
     }
 
     public void setNombreEvento(String nombreEvento) {
-        NombreEvento = nombreEvento;
+        this.NombreEvento = nombreEvento;
     }
 
     public String getDiasDeSemanas() {
-        return DiasDeSemanas;
+        return this.DiasDeSemanas;
     }
 
     public void setDiasDeSemanas(String diasDeSemanas) {
-        DiasDeSemanas = diasDeSemanas;
+        this.DiasDeSemanas = diasDeSemanas;
     }
 
     public String getFechaInicio() {
-        return FechaInicio;
+        return this.FechaInicio;
     }
 
     public void setFechaInicio(String fechaInicio) {
-        FechaInicio = fechaInicio;
+        this.FechaInicio = fechaInicio;
     }
 
     public String getFechaFin() {
-        return FechaFin;
+        return this.FechaFin;
     }
 
     public void setFechaFin(String fechaFin) {
-        FechaFin = fechaFin;
+        this.FechaFin = fechaFin;
     }
 
     public String getHoraEmpiezo() {
-        return HoraEmpiezo;
+        return this.HoraEmpiezo;
     }
 
     public void setHoraEmpiezo(String horaEmpiezo) {
-        HoraEmpiezo = horaEmpiezo;
+        this.HoraEmpiezo = horaEmpiezo;
     }
 
     public String getNombreIntalacion() {
-        return NombreIntalacion;
+        return this.NombreIntalacion;
     }
 
     public void setNombreIntalacion(String nombreIntalacion) {
-        NombreIntalacion = nombreIntalacion;
+        this.NombreIntalacion = nombreIntalacion;
     }
 
     public Eventos() {

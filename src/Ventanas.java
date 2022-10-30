@@ -23,10 +23,11 @@ public class Ventanas extends JFrame {
                 "Horario",
                 "Telefono",
                 "URL",
-                "ID"};
+                "ID",
+                "Wikidata Nivel de Mar"};
         SPARQL sparql= new SPARQL();
         ArrayList<Bibliotecas> arr= sparql.queryBiblioteca();
-        Object[][] data = new Object[arr.size()][7];
+        Object[][] data = new Object[arr.size()][8];
         for (int i=0;i<arr.size();i++){
             data[i][0]=arr.get(i).getNombre();
             data[i][1]=arr.get(i).getDireccion();
@@ -35,6 +36,7 @@ public class Ventanas extends JFrame {
             data[i][4]=arr.get(i).getTelefono();
             data[i][5]=arr.get(i).getUrl();
             data[i][6]=arr.get(i).getPk();
+
         }
         //JButton button1 = new JButton("Evento");
         JTable tabla= new JTable(data,columnNames);

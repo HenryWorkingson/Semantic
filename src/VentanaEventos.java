@@ -29,7 +29,6 @@ public class VentanaEventos  extends JFrame {
                 "Wiki:Coordenadas"};
         SPARQL sparql= new SPARQL();
         ArrayList<Eventos> arr= sparql.queryEventos(id);
-        System.out.println(arr.get(1).getNombreEvento());
         Object[][] data = new Object[arr.size()][9];
         for (int i=0;i<arr.size();i++){
             data[i][0]=arr.get(i).getNombreEvento();

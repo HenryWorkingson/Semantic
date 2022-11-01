@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class SPARQL {
     //static String uri = "C:\\Users\\donyi\\Documents\\GitHub\\Curso2022-2023\\HandsOn\\Group45\\rdf\\knowledge-graph.nt";
-    static String uri = "C:\\Users\\donyi\\Documents\\GitHub\\Curso2022-2023\\HandsOn\\Group45\\rdf\\knowledge-graph.nt";
+    static String uri = "C:\\Users\\donyi\\IdeaProjects\\Semantic\\knowledge-graph.nt";
     public SPARQL() {
 
     }
@@ -164,7 +164,6 @@ public class SPARQL {
         } finally {
             qexec.close();
         }
-        print(lista);
         ArrayList<Eventos> sol =new DatosWiki().DatosEventos(convEventos(lista));
         return sol;
     }
@@ -175,7 +174,7 @@ public class SPARQL {
     }
     //@SuppressWarnings("deprecation")
     public static void main (String args[]) throws IOException, MediaWikiApiErrorException {
-        System.out.println(queryEventos("1790").get(0).getWikidataEvento());
+
     }
 
 

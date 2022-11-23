@@ -9,16 +9,23 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+    /*
+        Ventana de swing de Biblioteca
+    */
 public class Ventanas extends JFrame {
     public Ventanas() throws IOException, MediaWikiApiErrorException {
         bibliotecas();
     }
+    //Devuelve una ventana de con informacion de bibliotecas
     public void bibliotecas() throws IOException, MediaWikiApiErrorException {
+        /*
+         Ventana de swing de Biblioteca, iniciando sus parametros de dimension y posicion donde aparece la ventana
+        */
         setTitle("Los Bibliotecas con Eventos");
         setResizable(true);
         setBounds(100,100,1300,700);
         JPanel panel=new JPanel();
-        JButton buton= new JButton();
+        //Añademos las nombres de las columnas.
         String[] columnNames = {"Biblioteca",
                 "Direccion",
                 "Descripcion",
@@ -27,6 +34,7 @@ public class Ventanas extends JFrame {
                 "URL",
                 "ID",
                 "Wikidata:Nivel de Mar"};
+        //sacamos los datos de biliotecas desde fichero RDF
         SPARQL sparql= new SPARQL();
         ArrayList<Bibliotecas> arr= sparql.queryBiblioteca();
         Object[][] data = new Object[arr.size()][8];
@@ -40,12 +48,12 @@ public class Ventanas extends JFrame {
             data[i][6]=arr.get(i).getPk();
             data[i][7]=arr.get(i).getNivelDeMar();
         }
-        //JButton button1 = new JButton("Evento");
+        //Crear la tabla
         JTable tabla= new JTable(data,columnNames);
         add(new JScrollPane(tabla),BorderLayout.CENTER);
+        //Crear un boton para cambiar al ventana de eventos pero tienes que introducir el id del biblioteca en textField
         JButton boton=new JButton("Eventos");
         JTextField textField = new JTextField(12);
-
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -67,6 +75,7 @@ public class Ventanas extends JFrame {
                 }
             }
         });
+        //JLabel donde se introduce el id del bilioteca
         JLabel lblIntroduzcaLaRuta = new JLabel("Escriba el id de biblioteca");
         lblIntroduzcaLaRuta.setBounds(36, 24, 375, 15);
         textField.setBounds(36,94,175,19);
@@ -76,11 +85,5 @@ public class Ventanas extends JFrame {
         add(panel,BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        //add(laminaBoton,BorderLayout.SOUTH);
-
-    }
-    public static void main(String args[]) throws IOException, MediaWikiApiErrorException {
-        Ventanas v=new Ventanas();
-
     }
 }

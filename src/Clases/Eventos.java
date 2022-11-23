@@ -1,5 +1,9 @@
 package Clases;
 
+
+/*
+    Entidad clase Eventos,
+ */
 public class Eventos {
     private String NombreEvento;
     private String FechaInicio;

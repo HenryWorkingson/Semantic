@@ -9,16 +9,22 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+    /*
+        Ventana de swing de Evento
+    */
 public class VentanaEventos  extends JFrame {
     private String id;
     public VentanaEventos() {
     }
+    //Devuelve una ventana de con informacion de eventos
     public void events(String id) throws IOException, MediaWikiApiErrorException {
+        /*
+            Ventana de swing de Eventos, iniciando sus parametros de dimension y posicion donde aparece la ventana
+        */
         setTitle("Los Bibliotecas con Eventos");
         setBounds(100,100,1300,700);
         JPanel panel=new JPanel();
-
-        JButton buton= new JButton();
+        //Añademos las nombres de las columnas.
         String[] columnNames = {
                 "Titulo de Evento",
                 "Fecha Inicio",
@@ -27,6 +33,7 @@ public class VentanaEventos  extends JFrame {
                 "NombreInstalacion",
                 "Wiki:Calle",
                 "Wiki:Coordenadas"};
+        //sacamos los datos de eventos del biblioteca correspondiente desde fichero RDF
         SPARQL sparql= new SPARQL();
         ArrayList<Eventos> arr= sparql.queryEventos(id);
         Object[][] data = new Object[arr.size()][9];
@@ -39,11 +46,11 @@ public class VentanaEventos  extends JFrame {
             data[i][5]=arr.get(i).getWikiStreet();
             data[i][6]=arr.get(i).getWikiCoor();
         }
-        //JButton button1 = new JButton("Evento");
+        //Crear la tabla
         JTable tabla= new JTable(data,columnNames);
         add(new JScrollPane(tabla), BorderLayout.CENTER);
+        //Crear un boton para volver al paso anterior
         JButton botonAtras=new JButton("Atras");
-
         botonAtras.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,10 +65,6 @@ public class VentanaEventos  extends JFrame {
                 }
                 windows.toFront();
                 windows.setState(Frame.NORMAL);
-                //Ventanas windows2=new Ventanas();
-                //windows2.toFront();
-                //windows2.bibliotecas();
-                //setDefaultCloseOperation(EXIT_ON_CLOSE);
                 dispose();
             }
         });

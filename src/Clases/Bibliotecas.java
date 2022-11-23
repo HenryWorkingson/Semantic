@@ -4,6 +4,10 @@ import org.wikidata.wdtk.wikibaseapi.apierrors.MediaWikiApiErrorException;
 import querys.DatosWiki;
 import java.io.IOException;
 
+
+/*
+    Entidad clase Biblioteca,
+ */
 public class Bibliotecas {
     private String pk;
     private String nombre;
